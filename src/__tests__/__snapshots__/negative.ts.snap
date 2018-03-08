@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toPayload 1`] = `
+Array [
+  "ts-tests/toPayload.ts/27,1 :
+    Expected 0 arguments, but got 1.",
+  "ts-tests/toPayload.ts/28,1 :
+    Expected 0 arguments, but got 1.",
+  "ts-tests/toPayload.ts/29,1 :
+    Expected 0 arguments, but got 1.",
+  "ts-tests/toPayload.ts/30,1 :
+    Expected 0 arguments, but got 2.",
+  "ts-tests/toPayload.ts/33,22 :
+    Argument of type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to parameter of type '(selector: Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, ...'.
+      Types of parameters 'source' and 'selector' are incompatible.
+        Type 'Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">>...' is not assignable to type 'Observable<Action<string, Payload<any>>>'.
+          Type '{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">> | Action<\\"...' is not assignable to type 'Action<string, Payload<any>>'.
+            Type '{ readonly type: \\"abc\\"; }' is not assignable to type 'Action<string, Payload<any>>'.
+              Type '{ readonly type: \\"abc\\"; }' is not assignable to type 'Payload<any>'.
+                Property 'payload' is missing in type '{ readonly type: \\"abc\\"; }'.",
+  "ts-tests/toPayload.ts/34,23 :
+    Argument of type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to parameter of type 'UnaryFunction<Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; ...'.
+      Types of parameters 'source' and 'source' are incompatible.
+        Type 'Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">>...' is not assignable to type 'Observable<Action<string, Payload<any>>>'.",
+  "ts-tests/toPayload.ts/37,29 :
+    Argument of type '<PA extends Action<string, Payload<any>>>() => UnaryFunction<Observable<PA>, Observable<PA[\\"paylo...' is not assignable to parameter of type '(selector: Observable<Action<\\"FWEW\\", Payload<string>> | Action<\\"QQQQE\\", Payload<{ value: string; ...'.
+      Type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to type 'Observable<{}>'.
+        Property '_isScalar' is missing in type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>'.",
+  "ts-tests/toPayload.ts/38,30 :
+    Argument of type '<PA extends Action<string, Payload<any>>>() => UnaryFunction<Observable<PA>, Observable<PA[\\"paylo...' is not assignable to parameter of type 'UnaryFunction<Observable<Action<\\"FWEW\\", Payload<string>> | Action<\\"QQQQE\\", Payload<{ value: strin...'.
+      Type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to type 'Observable<{}>'.",
+]
+`;
