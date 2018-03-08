@@ -13,6 +13,8 @@ TSdux utilities for Observables.
 ## Table of Contents ##
 
 - [How To Install](#how-to-install)
+- [API](#api)
+- [Author](#author)
 
 ## How To Install ##
 
@@ -73,3 +75,8 @@ Observable([
   });
 ```
 
+## Author ##
+
+Junyoung Clare Jang [@Ailrun]
+
+[@Ailrun]: https://github.com/Ailrun
