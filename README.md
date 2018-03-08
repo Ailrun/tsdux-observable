@@ -21,3 +21,26 @@ npm install --save redux rxjs tsdux tsdux-observable
 ```
 
 ## API ##
+
+- [toPayload](#topayload)
+
+### toPayload ###
+
+```typescript
+function toPayload<PA extends PayloadAction<string, any>>(): (source: Observable<PA>) => Observable<PA['payload']>
+```
+
+Function for mapping Observable of `PayloadAction` to Observable of `payload` property.
+
+``` typescript
+Observable([
+  action('abc', payload<string>()).create('d012d@!gWE'),
+  action('ttt', payload<number>()).create(178),
+])
+  .let(toPayload())
+  .toArray()
+  .subscribe((result) => {
+    console.log(result) // ['d012d@!gWE', 178]
+  });
+```
+
