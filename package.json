@@ -1,0 +1,66 @@
+{
+  "name": "tsdux-observable",
+  "version": "2.0.0",
+  "description": "TSdux utilities for Observables",
+  "private": true,
+  "scripts": {
+    "packaging": "npm-run-all clean-dist make-dist build copy-package",
+    "build": "npm-run-all -p build-cjs build-es5 build-es2015",
+    "clean-dist": "rimraf ./dist",
+    "make-dist": "mkdir ./dist",
+    "build-cjs": "npm-run-all compile-cjs",
+    "build-es5": "npm-run-all compile-es5",
+    "build-es2015": "npm-run-all compile-es2015",
+    "compile-cjs": "tsc --project ./tsconfig.cjs.json",
+    "compile-es5": "tsc --project ./tsconfig.es5.json",
+    "compile-es2015": "tsc --project ./tsconfig.es2015.json",
+    "copy-package": "node ./scripts/copy-package.js",
+    "lint": "tslint --format codeFrame --project .",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "version": "npm-run-all --silent update-changelog stage-changelog",
+    "update-changelog": "node ./scripts/add-changelog-version.js",
+    "stage-changelog": "git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ailrun/tsdux-observable.git"
+  },
+  "keywords": [
+    "redux",
+    "tsdux",
+    "redux-observable",
+    "rxjs",
+    "reactive",
+    "observable",
+    "typescript",
+    "type-safe",
+    "state"
+  ],
+  "author": {
+    "name": "Junyoung Clare Jang",
+    "email": "jjc9310@gmail.com",
+    "url": "https://ailrun.github.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ailrun/tsdux-observable/issues"
+  },
+  "homepage": "https://github.com/Ailrun/tsdux-observable#readme",
+  "devDependencies": {
+    "@types/jest": "^22.1.2",
+    "jest": "^22.3.0",
+    "npm-run-all": "^4.1.2",
+    "redux": "^3.7.2",
+    "rimraf": "^2.6.2",
+    "rxjs": "^5.5.6",
+    "ts-jest": "^22.0.4",
+    "tsdux": "^2.0.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1"
+  },
+  "peerDependencies": {
+    "rxjs": "^5",
+    "tsdux": "^2"
+  }
+}
