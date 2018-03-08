@@ -8,5 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Add `toPayload` function.
+- Add `ofType` function.
 
 [Unreleased]: https://github.com/Ailrun/tsdux-observable
