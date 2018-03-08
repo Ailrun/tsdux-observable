@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.0] - 2018-03-08
+
 ### Added
 - Add `toPayload` function.
 - Add `ofType` function.
 
 [Unreleased]: https://github.com/Ailrun/tsdux-observable
+[2.1.0]: https://github.com/Ailrun/tsdux/tree/v2.1.0
