@@ -22,7 +22,36 @@ npm install --save tsdux tsdux-observable
 
 ## API ##
 
+- [ofType](#ofType)
 - [toPayload](#topayload)
+
+### ofType ###
+
+``` typescript
+function ofType<AC extends ActionCreator<string, any>>(
+  actionCreators: AC | Array<AC>,
+): (source: Observable<AnyAction>) => Observable<AC['action']>
+```
+
+Function for filtering actions with `ActionCreator`s of [tsdux](https://github.com/Ailrun/tsdux).  
+This function filter out all actions except specified actions by `ActionCreator`s.
+
+``` typescript
+const AddTest = action('app/test/ADD_TEST', props<{ id: number test: string }>());
+const RemoveTest = action('app/test/REMOVE_TEST', props<{ id: number }>());
+
+Observable([
+  AddTest.create({ id: 0, test: '123' }),
+  RemoveTest.create({ id: 0 }),
+  AddTest.create({ id: 1, test: 'ABabABC' }),
+])
+  .let(ofType(AddTest))
+  .subscribe((action) => {
+    console.log(action);
+    // first logs { type: 'app/test/ADD_TEST', id: 0, test: '123' }
+    // and then logs { type: 'app/test/ADD_TEST', id: 1, test: 'ABabABC' }
+  })
+```
 
 ### toPayload ###
 
