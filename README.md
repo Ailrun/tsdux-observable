@@ -21,21 +21,3 @@ npm install --save redux rxjs tsdux tsdux-observable
 ```
 
 ## API ##
-
-### forType ###
-
-```typescript
-function forType<AC extends ActionCreator<string, any>, R>(actionCreators: AC | Array<AC>, map: (action: AC['action']) => R): Observable<R>
-```
-
-### ofType ###
-
-```typescript
-function ofType<AC extends ActionCreator<string, any>>(actionCreators: AC | Array<AC>): Observable<AnyAction> => Observable<AC['action']>
-```
-
-### toPayload ###
-
-```typescript
-function toPayload<PA extends PayloadAction<any>>(payloadAction$: Observable<PA>): Observable<PA['payload']>;
-```
