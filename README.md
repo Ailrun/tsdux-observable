@@ -8,7 +8,7 @@
 [![travis status](https://travis-ci.org/Ailrun/tsdux-observable.svg?branch=master)](https://travis-ci.org/Ailrun/tsdux-observable)
 [![codecov coverage](https://img.shields.io/codecov/c/github/ailrun/tsdux-observable.svg)](https://codecov.io/gh/Ailrun/tsdux-observable)
 
-TSdux utilities for Observables.
+[TSdux](https://github.com/Ailrun/tsdux) utilities for Observables.
 
 ## Table of Contents ##
 
@@ -52,7 +52,7 @@ Observable([
     console.log(action);
     // first logs { type: 'app/test/ADD_TEST', id: 0, test: '123' }
     // and then logs { type: 'app/test/ADD_TEST', id: 1, test: 'ABabABC' }
-  })
+  });
 ```
 
 ### toPayload ###
