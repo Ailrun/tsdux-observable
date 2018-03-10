@@ -4,6 +4,16 @@ import { action, payload } from 'tsdux';
 
 import { toPayload } from '../toPayload';
 
+test('`toPayload` should be safely callable without any parameters', () => {
+  expect(() => {
+    toPayload();
+  }).not.toThrowError();
+});
+
+test('`toPayload` should return a function', () => {
+  expect(typeof toPayload()).toBe('function');
+});
+
 test('`toPayload` should map payload action observable to payload observable', () => {
   expect.assertions(1);
 
