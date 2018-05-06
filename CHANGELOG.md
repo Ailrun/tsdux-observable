@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.2.1] - 2018-05-06
+
 ### Changed
 - Add supports for `redux@^4`
 
@@ -23,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add `ofType` function.
 
 [Unreleased]: https://github.com/Ailrun/tsdux-observable
+[2.2.1]: https://github.com/Ailrun/tsdux/tree/v2.2.1
 [2.2.0]: https://github.com/Ailrun/tsdux/tree/v2.2.0
 [2.1.1]: https://github.com/Ailrun/tsdux/tree/v2.1.1
 [2.1.0]: https://github.com/Ailrun/tsdux/tree/v2.1.0
