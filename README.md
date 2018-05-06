@@ -19,7 +19,7 @@
 ## How To Install ##
 
 ```
-npm install --save redux rxjs tsdux tsdux-observable
+npm install --save redux rxjs@^5 tsdux tsdux-observable
 ```
 
 ## API ##
