@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [3.0.0] - 2018-05-28
+
 ### Changed
 - Add supports for `rxjs@^6`
 - Remove supports for `rxjs@^5`
@@ -34,6 +36,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add `ofType` function.
 
 [Unreleased]: https://github.com/Ailrun/tsdux-observable
+[3.0.0]: https://github.com/Ailrun/tsdux/tree/v3.0.0
 [2.2.2]: https://github.com/Ailrun/tsdux/tree/v2.2.2
 [2.2.1]: https://github.com/Ailrun/tsdux/tree/v2.2.1
 [2.2.0]: https://github.com/Ailrun/tsdux/tree/v2.2.0

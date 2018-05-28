@@ -1,6 +1,6 @@
 {
   "name": "tsdux-observable",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "description": "TSdux utilities for Observables",
   "private": true,
   "scripts": {
