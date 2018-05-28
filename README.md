@@ -10,6 +10,8 @@
 
 [TSdux](https://github.com/Ailrun/tsdux) utilities for Observables.
 
+The latest version supports RxJS version 6 only. If you want to use this package with RxJS version 5, see [support-v5](https://github.com/Ailrun/tsdux-observable/tree/support-v5) branch (tsdux-observable@^2).
+
 ## Table of Contents ##
 
 - [How To Install](#how-to-install)
@@ -19,7 +21,7 @@
 ## How To Install ##
 
 ```
-npm install --save redux rxjs@^5 tsdux tsdux-observable
+npm install --save redux rxjs tsdux tsdux-observable
 ```
 
 ## API ##

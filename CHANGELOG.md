@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Add supports for `rxjs@^6`
+- Remove supports for `rxjs@^5`
+
 ## [2.2.2] - 2018-05-06
 
 ### Fixed

@@ -4,10 +4,10 @@ import {
 
 import {
   OperatorFunction,
-} from 'rxjs/interfaces';
+} from 'rxjs';
 import {
   filter,
-} from 'rxjs/operators/filter';
+} from 'rxjs/operators';
 
 import {
   isType,

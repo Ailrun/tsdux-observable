@@ -1,4 +1,6 @@
-import { Observable } from 'rxjs';
+import { AnyAction } from 'redux';
+import { from } from 'rxjs';
+import { toArray } from 'rxjs/operators';
 
 import { action, payload, props } from 'tsdux';
 
@@ -34,15 +36,17 @@ test('`ofType` should filter out actions in observable except matching ones', ()
   const OrTestAction = action('orAnother', props<{ test: number }>());
 
   //tslint:disable-next-line: no-unsafe-any
-  Observable.from([
+  from<AnyAction>([
     TestAction.create(),
     OtherAction.create('abc'),
     TestAction.create(),
     OrTestAction.create({ test: 0 }),
     OtherAction.create('TTBE'),
   ])
-    .let(ofType(OtherAction))
-    .toArray()
+    .pipe(
+      ofType(OtherAction),
+      toArray(),
+    )
     .subscribe((result) => {
       //tslint:disable-next-line: no-unsafe-any
       expect(result.every(({ type }) => type == OtherAction.type)).toBe(true);

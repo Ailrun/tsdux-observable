@@ -1,6 +1,7 @@
-import { Observable } from 'rxjs';
+import { from } from 'rxjs';
+import { toArray } from 'rxjs/operators';
 
-import { action, payload } from 'tsdux';
+import { PayloadAction, action, payload } from 'tsdux';
 
 import { toPayload } from '../toPayload';
 
@@ -18,12 +19,14 @@ test('`toPayload` should map payload action observable to payload observable', (
   expect.assertions(1);
 
   //tslint:disable-next-line: no-unsafe-any
-  Observable.from([
+  from<PayloadAction<string, any>>([
     action('', payload<number>()).create(0),
     action('', payload<string>()).create('abc'),
   ])
-    .let(toPayload())
-    .toArray()
+    .pipe(
+      toPayload(),
+      toArray(),
+    )
     .subscribe((result) => {
       expect(result).toEqual([0, 'abc']);
     });

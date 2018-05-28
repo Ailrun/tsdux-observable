@@ -2,10 +2,8 @@
 
 exports[`ofType 1`] = `
 Array [
-  "ts-tests/ofType.ts/45,1 :
+  "ts-tests/ofType.ts/46,1 :
     Expected 1 arguments, but got 0.",
-  "ts-tests/ofType.ts/48,1 :
-    Expected 1 arguments, but got 2.",
   "ts-tests/ofType.ts/49,1 :
     Expected 1 arguments, but got 2.",
   "ts-tests/ofType.ts/50,1 :
@@ -14,52 +12,44 @@ Array [
     Expected 1 arguments, but got 2.",
   "ts-tests/ofType.ts/52,1 :
     Expected 1 arguments, but got 2.",
-  "ts-tests/ofType.ts/55,8 :
-    Argument of type '5' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.",
+  "ts-tests/ofType.ts/53,1 :
+    Expected 1 arguments, but got 2.",
   "ts-tests/ofType.ts/56,8 :
-    Argument of type 'true' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.",
+    Argument of type '5' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.",
   "ts-tests/ofType.ts/57,8 :
+    Argument of type 'true' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.",
+  "ts-tests/ofType.ts/58,8 :
     Argument of type '{}' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
       Type '{}' is not assignable to type 'ActionCreator<string, any>[]'.
         Property 'length' is missing in type '{}'.",
-  "ts-tests/ofType.ts/58,8 :
+  "ts-tests/ofType.ts/59,8 :
     Argument of type '\\"abc\\"' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.",
-  "ts-tests/ofType.ts/61,22 :
-    Argument of type 'UnaryFunction<Observable<AnyAction>, Observable<{ readonly type: \\"Action0\\"; }>>' is not assignable to parameter of type '(selector: Observable<number>) => Observable<{ readonly type: \\"Action0\\"; }>'.
-      Types of parameters 'source' and 'selector' are incompatible.
-        Type 'Observable<number>' is not assignable to type 'Observable<AnyAction>'.
-          Type 'number' is not assignable to type 'AnyAction'.",
-  "ts-tests/ofType.ts/62,22 :
-    Argument of type 'UnaryFunction<Observable<AnyAction>, Observable<any>>' is not assignable to parameter of type '(selector: Observable<number>) => Observable<any>'.
-      Types of parameters 'source' and 'selector' are incompatible.
-        Type 'Observable<number>' is not assignable to type 'Observable<AnyAction>'.",
+  "ts-tests/ofType.ts/62,23 :
+    Argument of type 'OperatorFunction<AnyAction, { readonly type: \\"Action0\\"; }>' is not assignable to parameter of type 'OperatorFunction<number, { readonly type: \\"Action0\\"; }>'.
+      Type 'number' is not assignable to type 'AnyAction'.",
   "ts-tests/ofType.ts/63,23 :
-    Argument of type 'UnaryFunction<Observable<AnyAction>, Observable<Action<\\"Action1\\", Pick<{ x: number; y: number; },...' is not assignable to parameter of type '(selector: Observable<boolean>) => Observable<Action<\\"Action1\\", Pick<{ x: number; y: number; }, \\"...'.
-      Types of parameters 'source' and 'selector' are incompatible.
-        Type 'Observable<boolean>' is not assignable to type 'Observable<AnyAction>'.
-          Type 'boolean' is not assignable to type 'AnyAction'.",
-  "ts-tests/ofType.ts/64,23 :
-    Argument of type 'UnaryFunction<Observable<AnyAction>, Observable<Action<\\"Action2\\", Payload<{}>>>>' is not assignable to parameter of type '(selector: Observable<boolean>) => Observable<Action<\\"Action2\\", Payload<{}>>>'.
-      Types of parameters 'source' and 'selector' are incompatible.
-        Type 'Observable<boolean>' is not assignable to type 'Observable<AnyAction>'.",
-  "ts-tests/ofType.ts/67,22 :
-    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => UnaryFunction<Observable<An...' is not assignable to parameter of type '(selector: Observable<{ readonly type: \\"Action0\\"; } | Action<\\"Action1\\", Pick<{ x: number; y: numb...'.
-      Types of parameters 'actionCreators' and 'selector' are incompatible.
-        Type 'Observable<{ readonly type: \\"Action0\\"; } | Action<\\"Action1\\", Pick<{ x: number; y: number; }, \\"x\\" ...' is not assignable to type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
-          Type 'Observable<{ readonly type: \\"Action0\\"; } | Action<\\"Action1\\", Pick<{ x: number; y: number; }, \\"x\\" ...' is not assignable to type 'ActionCreator<string, any>[]'.
-            Property 'length' is missing in type 'Observable<{ readonly type: \\"Action0\\"; } | Action<\\"Action1\\", Pick<{ x: number; y: number; }, \\"x\\" ...'.",
+    Argument of type 'OperatorFunction<AnyAction, any>' is not assignable to parameter of type 'OperatorFunction<number, any>'.
+      Type 'number' is not assignable to type 'AnyAction'.",
+  "ts-tests/ofType.ts/64,24 :
+    Argument of type 'OperatorFunction<AnyAction, Action<\\"Action1\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">>>' is not assignable to parameter of type 'OperatorFunction<boolean, Action<\\"Action1\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">>>'.
+      Type 'boolean' is not assignable to type 'AnyAction'.",
+  "ts-tests/ofType.ts/65,24 :
+    Argument of type 'OperatorFunction<AnyAction, Action<\\"Action2\\", Payload<{}>>>' is not assignable to parameter of type 'OperatorFunction<boolean, Action<\\"Action2\\", Payload<{}>>>'.
+      Type 'boolean' is not assignable to type 'AnyAction'.",
   "ts-tests/ofType.ts/68,23 :
-    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => UnaryFunction<Observable<An...' is not assignable to parameter of type '(selector: Observable<{ readonly type: \\"Action0\\"; }>) => Observable<{}>'.
-      Types of parameters 'actionCreators' and 'selector' are incompatible.
+    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction,...' is not assignable to parameter of type 'OperatorFunction<AnyAction, {}>'.
+      Types of parameters 'actionCreators' and 'source' are incompatible.
+        Type 'Observable<AnyAction>' is not assignable to type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
+          Type 'Observable<AnyAction>' is not assignable to type 'ActionCreator<string, any>[]'.
+            Property 'length' is missing in type 'Observable<AnyAction>'.",
+  "ts-tests/ofType.ts/69,24 :
+    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction,...' is not assignable to parameter of type 'OperatorFunction<{ readonly type: \\"Action0\\"; }, {}>'.
+      Types of parameters 'actionCreators' and 'source' are incompatible.
         Type 'Observable<{ readonly type: \\"Action0\\"; }>' is not assignable to type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
           Type 'Observable<{ readonly type: \\"Action0\\"; }>' is not assignable to type 'ActionCreator<string, any>[]'.
             Property 'length' is missing in type 'Observable<{ readonly type: \\"Action0\\"; }>'.",
-  "ts-tests/ofType.ts/69,29 :
-    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => UnaryFunction<Observable<An...' is not assignable to parameter of type '(selector: Observable<Action<\\"Action5\\", Payload<string>> | Action<\\"Action3\\", Payload<number>> | A...'.
-      Types of parameters 'actionCreators' and 'selector' are incompatible.
-        Type 'Observable<Action<\\"Action5\\", Payload<string>> | Action<\\"Action3\\", Payload<number>> | Action<\\"Acti...' is not assignable to type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
-          Type 'Observable<Action<\\"Action5\\", Payload<string>> | Action<\\"Action3\\", Payload<number>> | Action<\\"Acti...' is not assignable to type 'ActionCreator<string, any>[]'.
-            Property 'length' is missing in type 'Observable<Action<\\"Action5\\", Payload<string>> | Action<\\"Action3\\", Payload<number>> | Action<\\"Acti...'.",
+  "ts-tests/ofType.ts/70,30 :
+    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction,...' is not assignable to parameter of type 'OperatorFunction<AnyAction, {}>'.",
 ]
 `;
 
@@ -73,24 +63,14 @@ Array [
     Expected 0 arguments, but got 1.",
   "ts-tests/toPayload.ts/30,1 :
     Expected 0 arguments, but got 2.",
-  "ts-tests/toPayload.ts/33,22 :
-    Argument of type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to parameter of type '(selector: Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, ...'.
-      Types of parameters 'source' and 'selector' are incompatible.
-        Type 'Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">>...' is not assignable to type 'Observable<Action<string, Payload<any>>>'.
-          Type '{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">> | Action<\\"...' is not assignable to type 'Action<string, Payload<any>>'.
-            Type '{ readonly type: \\"abc\\"; }' is not assignable to type 'Action<string, Payload<any>>'.
-              Type '{ readonly type: \\"abc\\"; }' is not assignable to type 'Payload<any>'.
-                Property 'payload' is missing in type '{ readonly type: \\"abc\\"; }'.",
-  "ts-tests/toPayload.ts/34,23 :
-    Argument of type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to parameter of type 'UnaryFunction<Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; ...'.
-      Types of parameters 'source' and 'source' are incompatible.
-        Type 'Observable<{ readonly type: \\"abc\\"; } | Action<\\"qefe\\", Pick<{ x: number; y: number; }, \\"x\\" | \\"y\\">>...' is not assignable to type 'Observable<Action<string, Payload<any>>>'.",
-  "ts-tests/toPayload.ts/37,29 :
-    Argument of type '<PA extends Action<string, Payload<any>>>() => UnaryFunction<Observable<PA>, Observable<PA[\\"paylo...' is not assignable to parameter of type '(selector: Observable<Action<\\"FWEW\\", Payload<string>> | Action<\\"QQQQE\\", Payload<{ value: string; ...'.
-      Type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to type 'Observable<{}>'.
-        Property '_isScalar' is missing in type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>'.",
-  "ts-tests/toPayload.ts/38,30 :
-    Argument of type '<PA extends Action<string, Payload<any>>>() => UnaryFunction<Observable<PA>, Observable<PA[\\"paylo...' is not assignable to parameter of type 'UnaryFunction<Observable<Action<\\"FWEW\\", Payload<string>> | Action<\\"QQQQE\\", Payload<{ value: strin...'.
-      Type 'UnaryFunction<Observable<Action<string, Payload<any>>>, Observable<any>>' is not assignable to type 'Observable<{}>'.",
+  "ts-tests/toPayload.ts/33,23 :
+    Argument of type 'OperatorFunction<Action<string, Payload<any>>, any>' is not assignable to parameter of type 'OperatorFunction<{ readonly type: string; }, any>'.
+      Type '{ readonly type: string; }' is not assignable to type 'Action<string, Payload<any>>'.
+        Type '{ readonly type: string; }' is not assignable to type 'Payload<any>'.
+          Property 'payload' is missing in type '{ readonly type: string; }'.",
+  "ts-tests/toPayload.ts/36,30 :
+    Argument of type '<PA extends Action<string, Payload<any>>>() => OperatorFunction<PA, PA[\\"payload\\"]>' is not assignable to parameter of type 'OperatorFunction<Action<string, Payload<any>>, {}>'.
+      Type 'OperatorFunction<Action<string, Payload<any>>, any>' is not assignable to type 'Observable<{}>'.
+        Property '_isScalar' is missing in type 'OperatorFunction<Action<string, Payload<any>>, any>'.",
 ]
 `;

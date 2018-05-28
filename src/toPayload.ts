@@ -1,9 +1,9 @@
 import {
   OperatorFunction,
-} from 'rxjs/interfaces';
+} from 'rxjs';
 import {
   map,
-} from 'rxjs/operators/map';
+} from 'rxjs/operators';
 
 import {
   PayloadAction,

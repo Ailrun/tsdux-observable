@@ -53,7 +53,7 @@
     "npm-run-all": "^4.1.2",
     "redux": "^4.0.0",
     "rimraf": "^2.6.2",
-    "rxjs": "^5.5.6",
+    "rxjs": "^6.2.0",
     "ts-jest": "^22.0.4",
     "tsdux": "^2.2.1",
     "tslint": "^5.9.1",
@@ -61,7 +61,7 @@
   },
   "peerDependencies": {
     "redux": "^3.7.2 || ^4",
-    "rxjs": "^5",
+    "rxjs": "^6",
     "tsdux": "^2"
   }
 }

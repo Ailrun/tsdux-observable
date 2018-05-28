@@ -1,4 +1,5 @@
-import { Observable } from 'rxjs';
+import { AnyAction } from 'redux';
+import { from } from 'rxjs';
 
 import { action, payload, props } from 'tsdux';
 
@@ -13,7 +14,7 @@ const Action4 = action('Action4', props<{}>());
 const Action5 = action('Action5', payload<string>());
 const Action6 = action('Action6');
 
-const actionObservable = Observable.from([
+const actionObservable = from<AnyAction>([
   Action0.create(),
   Action1.create({ x: 4, y: 5 }),
   Action5.create('123'),
@@ -24,18 +25,18 @@ const actionObservable = Observable.from([
   Action6.create(),
 ]);
 
-const payloadActionObservable = Observable.from([
+const payloadActionObservable = from<AnyAction>([
   Action2.create({}),
   Action3.create(5),
   Action5.create('abc'),
   Action3.create(2),
 ]);
 
-const numberObservable = Observable.from([0, 1, 0]);
-const booleanObservable = Observable.from([true, true, false, true]);
+const numberObservable = from<number>([0, 1, 0]);
+const booleanObservable = from<boolean>([true, true, false, true]);
 
-const action0Observable = actionObservable.let(ofType(Action0));
-const action23Observable = payloadActionObservable.let(ofType([Action2, Action3]));
+const action0Observable = actionObservable.pipe(ofType(Action0));
+const action23Observable = payloadActionObservable.pipe(ofType([Action2, Action3]));
 //END: Constants for tests
 
 
@@ -58,13 +59,13 @@ ofType({});
 ofType('abc');
 
 //FAIL: Use observable that is not an observable of `AnyAction`.
-numberObservable.let(ofType(Action0));
-numberObservable.let(ofType([]));
-booleanObservable.let(ofType([Action1]));
-booleanObservable.let(ofType(Action2));
+numberObservable.pipe(ofType(Action0));
+numberObservable.pipe(ofType([]));
+booleanObservable.pipe(ofType([Action1]));
+booleanObservable.pipe(ofType(Action2));
 
 //FAIL: Pass `ofType` itself instead of result of it.
-actionObservable.let(ofType);
-action0Observable.let(ofType);
-payloadActionObservable.let(ofType);
+actionObservable.pipe(ofType);
+action0Observable.pipe(ofType);
+payloadActionObservable.pipe(ofType);
 //END: Tests
