@@ -9,7 +9,7 @@ select version_type in "patch" "minor" "major"; do
 done
 
 npm run packaging
-read -p "Ready to publish tsdux@$version. [Enter] to continue"
+read -p "Ready to publish tsdux-observable@$version. [Enter] to continue"
 cd dist/
 npm publish
 cd ../

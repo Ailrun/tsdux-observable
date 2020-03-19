@@ -4,15 +4,15 @@ exports[`ofType 1`] = `
 Array [
   "ts-tests/ofType.ts/46,1 :
     Expected 1 arguments, but got 0.",
-  "ts-tests/ofType.ts/49,1 :
+  "ts-tests/ofType.ts/49,12 :
     Expected 1 arguments, but got 2.",
-  "ts-tests/ofType.ts/50,1 :
+  "ts-tests/ofType.ts/50,12 :
     Expected 1 arguments, but got 2.",
-  "ts-tests/ofType.ts/51,1 :
+  "ts-tests/ofType.ts/51,12 :
     Expected 1 arguments, but got 2.",
-  "ts-tests/ofType.ts/52,1 :
+  "ts-tests/ofType.ts/52,17 :
     Expected 1 arguments, but got 2.",
-  "ts-tests/ofType.ts/53,1 :
+  "ts-tests/ofType.ts/53,19 :
     Expected 1 arguments, but got 2.",
   "ts-tests/ofType.ts/56,8 :
     Argument of type '5' is not assignable to parameter of type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.",
@@ -36,36 +36,36 @@ Array [
     Argument of type 'OperatorFunction<AnyAction, Action<\\"Action2\\", Payload<{}>>>' is not assignable to parameter of type 'OperatorFunction<boolean, Action<\\"Action2\\", Payload<{}>>>'.
       Type 'boolean' is not assignable to type 'AnyAction'.",
   "ts-tests/ofType.ts/68,23 :
-    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction, AC[\\"action\\"]>' is not assignable to parameter of type 'OperatorFunction<AnyAction, {}>'.
+    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction, AC[\\"action\\"]>' is not assignable to parameter of type 'OperatorFunction<AnyAction, unknown>'.
       Types of parameters 'actionCreators' and 'source' are incompatible.
         Type 'Observable<AnyAction>' is not assignable to type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
           Type 'Observable<AnyAction>' is missing the following properties from type 'ActionCreator<string, any>[]': length, pop, push, concat, and 15 more.",
   "ts-tests/ofType.ts/69,24 :
-    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction, AC[\\"action\\"]>' is not assignable to parameter of type 'OperatorFunction<{ readonly type: \\"Action0\\"; }, {}>'.
+    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction, AC[\\"action\\"]>' is not assignable to parameter of type 'OperatorFunction<{ readonly type: \\"Action0\\"; }, unknown>'.
       Types of parameters 'actionCreators' and 'source' are incompatible.
         Type 'Observable<{ readonly type: \\"Action0\\"; }>' is not assignable to type 'ActionCreator<string, any> | ActionCreator<string, any>[]'.
           Type 'Observable<{ readonly type: \\"Action0\\"; }>' is missing the following properties from type 'ActionCreator<string, any>[]': length, pop, push, concat, and 15 more.",
   "ts-tests/ofType.ts/70,30 :
-    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction, AC[\\"action\\"]>' is not assignable to parameter of type 'OperatorFunction<AnyAction, {}>'.",
+    Argument of type '<AC extends ActionCreator<string, any>>(actionCreators: AC | AC[]) => OperatorFunction<AnyAction, AC[\\"action\\"]>' is not assignable to parameter of type 'OperatorFunction<AnyAction, unknown>'.",
 ]
 `;
 
 exports[`toPayload 1`] = `
 Array [
-  "ts-tests/toPayload.ts/27,1 :
+  "ts-tests/toPayload.ts/27,11 :
     Expected 0 arguments, but got 1.",
-  "ts-tests/toPayload.ts/28,1 :
+  "ts-tests/toPayload.ts/28,11 :
     Expected 0 arguments, but got 1.",
-  "ts-tests/toPayload.ts/29,1 :
+  "ts-tests/toPayload.ts/29,11 :
     Expected 0 arguments, but got 1.",
-  "ts-tests/toPayload.ts/30,1 :
+  "ts-tests/toPayload.ts/30,11 :
     Expected 0 arguments, but got 2.",
   "ts-tests/toPayload.ts/33,23 :
     Argument of type 'OperatorFunction<Action<string, Payload<any>>, any>' is not assignable to parameter of type 'OperatorFunction<{ readonly type: string; }, any>'.
       Type '{ readonly type: string; }' is not assignable to type 'Action<string, Payload<any>>'.
         Property 'payload' is missing in type '{ readonly type: string; }' but required in type 'Payload<any>'.",
   "ts-tests/toPayload.ts/36,30 :
-    Argument of type '<PA extends Action<string, Payload<any>>>() => OperatorFunction<PA, PA[\\"payload\\"]>' is not assignable to parameter of type 'OperatorFunction<Action<string, Payload<any>>, {}>'.
-      Type 'OperatorFunction<Action<string, Payload<any>>, any>' is missing the following properties from type 'Observable<{}>': _isScalar, source, operator, lift, and 6 more.",
+    Argument of type '<PA extends Action<string, Payload<any>>>() => OperatorFunction<PA, PA[\\"payload\\"]>' is not assignable to parameter of type 'OperatorFunction<Action<string, Payload<any>>, unknown>'.
+      Type 'OperatorFunction<Action<string, Payload<any>>, any>' is missing the following properties from type 'Observable<unknown>': _isScalar, source, operator, lift, and 6 more.",
 ]
 `;

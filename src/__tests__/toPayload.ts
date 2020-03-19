@@ -19,7 +19,7 @@ test('`toPayload` should map payload action observable to payload observable', (
   expect.assertions(1);
 
   //tslint:disable-next-line: no-unsafe-any
-  from<PayloadAction<string, any>>([
+  from<PayloadAction<string, any>[]>([
     action('', payload<number>()).create(0),
     action('', payload<string>()).create('abc'),
   ])

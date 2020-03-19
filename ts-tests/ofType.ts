@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux';
-import { from } from 'rxjs';
+import { Observable, from } from 'rxjs';
 
 import { action, payload, props } from 'tsdux';
 
@@ -14,7 +14,7 @@ const Action4 = action('Action4', props<{}>());
 const Action5 = action('Action5', payload<string>());
 const Action6 = action('Action6');
 
-const actionObservable = from<AnyAction>([
+const actionObservable = from([
   Action0.create(),
   Action1.create({ x: 4, y: 5 }),
   Action5.create('123'),
@@ -23,17 +23,17 @@ const actionObservable = from<AnyAction>([
   Action2.create({}),
   Action3.create(2),
   Action6.create(),
-]);
+]) as Observable<AnyAction>;
 
-const payloadActionObservable = from<AnyAction>([
+const payloadActionObservable = from([
   Action2.create({}),
   Action3.create(5),
   Action5.create('abc'),
   Action3.create(2),
-]);
+]) as Observable<AnyAction>;
 
-const numberObservable = from<number>([0, 1, 0]);
-const booleanObservable = from<boolean>([true, true, false, true]);
+const numberObservable = from([0, 1, 0]) as Observable<number>;
+const booleanObservable = from([true, true, false, true]) as Observable<boolean>;
 
 const action0Observable = actionObservable.pipe(ofType(Action0));
 const action23Observable = payloadActionObservable.pipe(ofType([Action2, Action3]));

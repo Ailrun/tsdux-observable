@@ -36,7 +36,7 @@ test('`ofType` should filter out actions in observable except matching ones', ()
   const OrTestAction = action('orAnother', props<{ test: number }>());
 
   //tslint:disable-next-line: no-unsafe-any
-  from<AnyAction>([
+  from<AnyAction[]>([
     TestAction.create(),
     OtherAction.create('abc'),
     TestAction.create(),
